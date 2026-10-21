@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AutomationRouteImport } from './routes/automation'
+import { Route as DuyetNoiDungRouteImport } from './routes/duyet-noi-dung'
+import { Route as GioiHanRouteImport } from './routes/gioi-han'
+import { Route as KhoGroupRouteImport } from './routes/kho-group'
+import { Route as KhoNoiDungRouteImport } from './routes/kho-noi-dung'
+import { Route as KienThucRouteImport } from './routes/kien-thuc'
+import { Route as NhatKyRouteImport } from './routes/nhat-ky'
+import { Route as ProxyRouteImport } from './routes/proxy'
+import { Route as TaiKhoanRouteImport } from './routes/tai-khoan'
+import { Route as TienIchRouteImport } from './routes/tien-ich'
+import { Route as TinNhanRouteImport } from './routes/tin-nhan'
+import { Route as TroLyAiRouteImport } from './routes/tro-ly-ai'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutomationRoute = AutomationRouteImport.update({
+  id: '/automation',
+  path: '/automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DuyetNoiDungRoute = DuyetNoiDungRouteImport.update({
+  id: '/duyet-noi-dung',
+  path: '/duyet-noi-dung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GioiHanRoute = GioiHanRouteImport.update({
+  id: '/gioi-han',
+  path: '/gioi-han',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KhoGroupRoute = KhoGroupRouteImport.update({
+  id: '/kho-group',
+  path: '/kho-group',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KhoNoiDungRoute = KhoNoiDungRouteImport.update({
+  id: '/kho-noi-dung',
+  path: '/kho-noi-dung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KienThucRoute = KienThucRouteImport.update({
+  id: '/kien-thuc',
+  path: '/kien-thuc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NhatKyRoute = NhatKyRouteImport.update({
+  id: '/nhat-ky',
+  path: '/nhat-ky',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProxyRoute = ProxyRouteImport.update({
+  id: '/proxy',
+  path: '/proxy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaiKhoanRoute = TaiKhoanRouteImport.update({
+  id: '/tai-khoan',
+  path: '/tai-khoan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TienIchRoute = TienIchRouteImport.update({
+  id: '/tien-ich',
+  path: '/tien-ich',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TinNhanRoute = TinNhanRouteImport.update({
+  id: '/tin-nhan',
+  path: '/tin-nhan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TroLyAiRoute = TroLyAiRouteImport.update({
+  id: '/tro-ly-ai',
+  path: '/tro-ly-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/automation': typeof AutomationRoute
+  '/duyet-noi-dung': typeof DuyetNoiDungRoute
+  '/gioi-han': typeof GioiHanRoute
+  '/kho-group': typeof KhoGroupRoute
+  '/kho-noi-dung': typeof KhoNoiDungRoute
+  '/kien-thuc': typeof KienThucRoute
+  '/nhat-ky': typeof NhatKyRoute
+  '/proxy': typeof ProxyRoute
+  '/tai-khoan': typeof TaiKhoanRoute
+  '/tien-ich': typeof TienIchRoute
+  '/tin-nhan': typeof TinNhanRoute
+  '/tro-ly-ai': typeof TroLyAiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/automation': typeof AutomationRoute
+  '/duyet-noi-dung': typeof DuyetNoiDungRoute
+  '/gioi-han': typeof GioiHanRoute
+  '/kho-group': typeof KhoGroupRoute
+  '/kho-noi-dung': typeof KhoNoiDungRoute
+  '/kien-thuc': typeof KienThucRoute
+  '/nhat-ky': typeof NhatKyRoute
+  '/proxy': typeof ProxyRoute
+  '/tai-khoan': typeof TaiKhoanRoute
+  '/tien-ich': typeof TienIchRoute
+  '/tin-nhan': typeof TinNhanRoute
+  '/tro-ly-ai': typeof TroLyAiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/automation': typeof AutomationRoute
+  '/duyet-noi-dung': typeof DuyetNoiDungRoute
+  '/gioi-han': typeof GioiHanRoute
+  '/kho-group': typeof KhoGroupRoute
+  '/kho-noi-dung': typeof KhoNoiDungRoute
+  '/kien-thuc': typeof KienThucRoute
+  '/nhat-ky': typeof NhatKyRoute
+  '/proxy': typeof ProxyRoute
+  '/tai-khoan': typeof TaiKhoanRoute
+  '/tien-ich': typeof TienIchRoute
+  '/tin-nhan': typeof TinNhanRoute
+  '/tro-ly-ai': typeof TroLyAiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/automation'
+    | '/duyet-noi-dung'
+    | '/gioi-han'
+    | '/kho-group'
+    | '/kho-noi-dung'
+    | '/kien-thuc'
+    | '/nhat-ky'
+    | '/proxy'
+    | '/tai-khoan'
+    | '/tien-ich'
+    | '/tin-nhan'
+    | '/tro-ly-ai'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/automation'
+    | '/duyet-noi-dung'
+    | '/gioi-han'
+    | '/kho-group'
+    | '/kho-noi-dung'
+    | '/kien-thuc'
+    | '/nhat-ky'
+    | '/proxy'
+    | '/tai-khoan'
+    | '/tien-ich'
+    | '/tin-nhan'
+    | '/tro-ly-ai'
+  id:
+    | '__root__'
+    | '/'
+    | '/automation'
+    | '/duyet-noi-dung'
+    | '/gioi-han'
+    | '/kho-group'
+    | '/kho-noi-dung'
+    | '/kien-thuc'
+    | '/nhat-ky'
+    | '/proxy'
+    | '/tai-khoan'
+    | '/tien-ich'
+    | '/tin-nhan'
+    | '/tro-ly-ai'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AutomationRoute: typeof AutomationRoute
+  DuyetNoiDungRoute: typeof DuyetNoiDungRoute
+  GioiHanRoute: typeof GioiHanRoute
+  KhoGroupRoute: typeof KhoGroupRoute
+  KhoNoiDungRoute: typeof KhoNoiDungRoute
+  KienThucRoute: typeof KienThucRoute
+  NhatKyRoute: typeof NhatKyRoute
+  ProxyRoute: typeof ProxyRoute
+  TaiKhoanRoute: typeof TaiKhoanRoute
+  TienIchRoute: typeof TienIchRoute
+  TinNhanRoute: typeof TinNhanRoute
+  TroLyAiRoute: typeof TroLyAiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/automation': {
+      id: '/automation'
+      path: '/automation'
+      fullPath: '/automation'
+      preLoaderRoute: typeof AutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/duyet-noi-dung': {
+      id: '/duyet-noi-dung'
+      path: '/duyet-noi-dung'
+      fullPath: '/duyet-noi-dung'
+      preLoaderRoute: typeof DuyetNoiDungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gioi-han': {
+      id: '/gioi-han'
+      path: '/gioi-han'
+      fullPath: '/gioi-han'
+      preLoaderRoute: typeof GioiHanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kho-group': {
+      id: '/kho-group'
+      path: '/kho-group'
+      fullPath: '/kho-group'
+      preLoaderRoute: typeof KhoGroupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kho-noi-dung': {
+      id: '/kho-noi-dung'
+      path: '/kho-noi-dung'
+      fullPath: '/kho-noi-dung'
+      preLoaderRoute: typeof KhoNoiDungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kien-thuc': {
+      id: '/kien-thuc'
+      path: '/kien-thuc'
+      fullPath: '/kien-thuc'
+      preLoaderRoute: typeof KienThucRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nhat-ky': {
+      id: '/nhat-ky'
+      path: '/nhat-ky'
+      fullPath: '/nhat-ky'
+      preLoaderRoute: typeof NhatKyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proxy': {
+      id: '/proxy'
+      path: '/proxy'
+      fullPath: '/proxy'
+      preLoaderRoute: typeof ProxyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tai-khoan': {
+      id: '/tai-khoan'
+      path: '/tai-khoan'
+      fullPath: '/tai-khoan'
+      preLoaderRoute: typeof TaiKhoanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tien-ich': {
+      id: '/tien-ich'
+      path: '/tien-ich'
+      fullPath: '/tien-ich'
+      preLoaderRoute: typeof TienIchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tin-nhan': {
+      id: '/tin-nhan'
+      path: '/tin-nhan'
+      fullPath: '/tin-nhan'
+      preLoaderRoute: typeof TinNhanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tro-ly-ai': {
+      id: '/tro-ly-ai'
+      path: '/tro-ly-ai'
+      fullPath: '/tro-ly-ai'
+      preLoaderRoute: typeof TroLyAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AutomationRoute: AutomationRoute,
+  DuyetNoiDungRoute: DuyetNoiDungRoute,
+  GioiHanRoute: GioiHanRoute,
+  KhoGroupRoute: KhoGroupRoute,
+  KhoNoiDungRoute: KhoNoiDungRoute,
+  KienThucRoute: KienThucRoute,
+  NhatKyRoute: NhatKyRoute,
+  ProxyRoute: ProxyRoute,
+  TaiKhoanRoute: TaiKhoanRoute,
+  TienIchRoute: TienIchRoute,
+  TinNhanRoute: TinNhanRoute,
+  TroLyAiRoute: TroLyAiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
